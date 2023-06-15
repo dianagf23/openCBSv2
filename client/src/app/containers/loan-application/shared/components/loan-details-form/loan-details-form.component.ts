@@ -279,7 +279,8 @@ export class LoanDetailsFormComponent implements OnInit {
     if ( creditLine ) {
       this.creditLinesData.forEach(val => {
         if ( val.id === creditLine ) {
-          this.disabledLoanProduct = true;
+          // this.disabledLoanProduct = true;
+          console.log(this.loanAppFormState);
           this.form.controls['loanProductId'].setValue(val.loanProduct.id);
           this.onLPSelect(val.loanProduct, val);
           this.onCreditLineSelect.emit(val);
